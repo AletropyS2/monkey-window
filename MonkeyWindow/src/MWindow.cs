@@ -1,4 +1,5 @@
 ﻿using GLFW;
+using MonkeyWindow.Debug;
 using MonkeyWindow.Graphics;
 using OpenGL;
 
@@ -17,6 +18,10 @@ public class MWindow
             return;
         }
 
+        Glfw.WindowHint(Hint.ContextVersionMajor, 3);
+        Glfw.WindowHint(Hint.ContextVersionMinor, 3);
+        Glfw.WindowHint(Hint.OpenglProfile, Profile.Core);
+
         // Creating window and setting context
         window = Glfw.CreateWindow(width, height, title,GLFW.Monitor.None, GLFW.Window.None);
         Glfw.MakeContextCurrent(window);
@@ -26,10 +31,10 @@ public class MWindow
 
         float[] vertices = new float[]
         {
-            -0.5f, -0.5f, 1.0f, 0.0f, 0.0f,
-            0.5f, -0.5f, 0.0f, 1.0f, 0.0f,
-            0.5f, 0.5f, 0.0f, 0.0f, 1.0f,
-            -0.5f, 0.5f, 1.0f, 1.0f, 0.0f
+            -0.5f, -0.5f,
+            0.5f, -0.5f,
+            0.5f, 0.5f,
+            -0.5f, 0.5f
         };
 
         uint[] indices = new uint[]
@@ -38,35 +43,58 @@ public class MWindow
             2, 3, 0
         };
 
+        VertexArray va = new VertexArray();
 
-        uint vbo = Gl.GenBuffer();
+        VertexBuffer<float> vb = new VertexBuffer<float>(vertices, vertices.Length * sizeof(float));
+        IndexBuffer ib = new IndexBuffer(indices, indices.Length);
 
-        Gl.BindBuffer(BufferTarget.ArrayBuffer, vbo);
-        Gl.BufferData<float>(BufferTarget.ArrayBuffer, vertices.Length * sizeof(float), vertices, BufferUsageHint.StaticDraw);
+        VertexBufferLayout layout = new VertexBufferLayout();
+        layout.PushFloat(2);
 
-        Gl.EnableVertexAttribArray(0);
-        Gl.VertexAttribPointer(0, 2, VertexAttribPointerType.Float, false, 5 * sizeof(float), IntPtr.Zero);
-
-        Gl.EnableVertexAttribArray(1);
-        Gl.VertexAttribPointer(1, 3, VertexAttribPointerType.Float, false, 5 * sizeof(float), new IntPtr(2 * sizeof(float)));
-
-
-        uint vao = Gl.GenBuffer();
-
-        Gl.BindBuffer(BufferTarget.ElementArrayBuffer, vao);
-        Gl.BufferData<uint>(BufferTarget.ElementArrayBuffer, indices.Length * sizeof(uint), indices, BufferUsageHint.StaticDraw);
+        va.AddBuffer(vb, layout);
 
         DefaultShaders.SimpleShader.Use();
+
+        int location = Gl.GetUniformLocation(DefaultShaders.SimpleShader.Program, "u_Color");
+
+        if(location == -1)
+        {
+            MDebug.Error("Failed to get uniform location");
+        }
+
+        Gl.Uniform4f(location, 0.8f, 0.3f, 0.8f, 1.0f);
+
+        float r = 0.0f;
+        float increment = 0.05f;
 
         while(!Glfw.WindowShouldClose(window))
         {
             Paint();
             
-            Gl.DrawElements(BeginMode.LineLoop, 6, DrawElementsType.UnsignedInt, IntPtr.Zero);
+            Gl.Uniform4f(location, r, 0.3f, 0.8f, 1.0f);
+
+            va.Bind();
+            ib.Bind();
+
+            Gl.DrawElements(BeginMode.Triangles, 6, DrawElementsType.UnsignedInt, IntPtr.Zero);
+
+            if(r > 1.0f)
+            {
+                increment = -0.05f;
+            }
+            else if(r < 0.0f)
+            {
+                increment = 0.05f;
+            }
+
+            r += increment;
 
             Glfw.PollEvents();
             Glfw.SwapBuffers(window);
         }
+
+        Glfw.DestroyWindow(window);
+        Glfw.Terminate();
     }
 
     private void Paint()
