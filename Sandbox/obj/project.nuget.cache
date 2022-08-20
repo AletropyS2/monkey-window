@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "mvs/k7cFu4sDbYg5ViIunlNJnwCZCe929l8JlJ7JtQxyM3jplF+eohfU725vGN7hX1fj1HVmq7umNMmWbaNerg==",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\C#\\MonkeyWindow\\Sandbox\\Sandbox.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Nixan\\.nuget\\packages\\giawa.opengl\\0.2.1\\giawa.opengl.0.2.1.nupkg.sha512",
+    "C:\\Users\\Nixan\\.nuget\\packages\\glfw-net\\3.3.1\\glfw-net.3.3.1.nupkg.sha512",
+    "C:\\Users\\Nixan\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\Nixan\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\Nixan\\.nuget\\packages\\system.drawing.common\\5.0.2\\system.drawing.common.5.0.2.nupkg.sha512",
+    "C:\\Users\\Nixan\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\Nixan\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,71 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Projects\\C#\\MonkeyWindow\\MonkeyWindow\\MonkeyWindow.csproj": {}
+  },
+  "projects": {
+    "D:\\Projects\\C#\\MonkeyWindow\\MonkeyWindow\\MonkeyWindow.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\C#\\MonkeyWindow\\MonkeyWindow\\MonkeyWindow.csproj",
+        "projectName": "MonkeyWindow",
+        "projectPath": "D:\\Projects\\C#\\MonkeyWindow\\MonkeyWindow\\MonkeyWindow.csproj",
+        "packagesPath": "C:\\Users\\Nixan\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\C#\\MonkeyWindow\\MonkeyWindow\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Nixan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Giawa.OpenGL": {
+              "target": "Package",
+              "version": "[0.2.1, )"
+            },
+            "glfw-net": {
+              "target": "Package",
+              "version": "[3.3.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
