@@ -2,7 +2,7 @@ using OpenGL;
 
 namespace MonkeyWindow.Graphics;
 
-class VertexArray
+public class VertexArray
 {
 
     private uint m_RendererID;

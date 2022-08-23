@@ -317,11 +317,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\C#\\MonkeyWindow\\MonkeyWindow\\MonkeyWindow.csproj",
+      "projectUniqueName": "E:\\Projects\\C#\\MonkeyWindow\\MonkeyWindow\\MonkeyWindow.csproj",
       "projectName": "MonkeyWindow",
-      "projectPath": "D:\\Projects\\C#\\MonkeyWindow\\MonkeyWindow\\MonkeyWindow.csproj",
+      "projectPath": "E:\\Projects\\C#\\MonkeyWindow\\MonkeyWindow\\MonkeyWindow.csproj",
       "packagesPath": "C:\\Users\\Nixan\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\C#\\MonkeyWindow\\MonkeyWindow\\obj\\",
+      "outputPath": "E:\\Projects\\C#\\MonkeyWindow\\MonkeyWindow\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Nixan\\AppData\\Roaming\\NuGet\\NuGet.Config"

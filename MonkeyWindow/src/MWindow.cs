@@ -53,30 +53,29 @@ public class MWindow
 
         va.AddBuffer(vb, layout);
 
-        DefaultShaders.SimpleShader.Use();
+        DefaultShaders.SimpleShader.Bind();
 
-        int location = Gl.GetUniformLocation(DefaultShaders.SimpleShader.Program, "u_Color");
+        DefaultShaders.SimpleShader.SetUniform4f("u_Color", 0.8f, 0.3f, 0.8f, 1.0f);
 
-        if(location == -1)
-        {
-            MDebug.Error("Failed to get uniform location");
-        }
 
-        Gl.Uniform4f(location, 0.8f, 0.3f, 0.8f, 1.0f);
+        va.Unbind();
+        ib.Unbind();
+        vb.Unbind();
+        DefaultShaders.SimpleShader.Unbind();
+
+        Renderer renderer = new Renderer();
 
         float r = 0.0f;
         float increment = 0.05f;
 
         while(!Glfw.WindowShouldClose(window))
         {
-            Paint();
+            Paint(renderer);
+
+            DefaultShaders.SimpleShader.Bind();
+            DefaultShaders.SimpleShader.SetUniform4f("u_Color", r, 0.3f, 0.8f, 1.0f);
             
-            Gl.Uniform4f(location, r, 0.3f, 0.8f, 1.0f);
-
-            va.Bind();
-            ib.Bind();
-
-            Gl.DrawElements(BeginMode.Triangles, 6, DrawElementsType.UnsignedInt, IntPtr.Zero);
+            renderer.Draw(va, ib, DefaultShaders.SimpleShader);
 
             if(r > 1.0f)
             {
@@ -97,10 +96,10 @@ public class MWindow
         Glfw.Terminate();
     }
 
-    private void Paint()
+    private void Paint(Renderer r)
     {
         // Drawing stuff
-        
+        r.Clear();
 
         OnWindowPaint();
     }

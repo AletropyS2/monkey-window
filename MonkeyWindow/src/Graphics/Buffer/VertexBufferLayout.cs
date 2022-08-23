@@ -4,7 +4,7 @@ using OpenGL;
 
 namespace MonkeyWindow.Graphics;
 
-struct VertexBufferElement
+public struct VertexBufferElement
 {
     public int count;
     public VertexAttribPointerType type;
@@ -27,7 +27,7 @@ struct VertexBufferElement
     }
 }
 
-class VertexBufferLayout
+public class VertexBufferLayout
 {
     private List<VertexBufferElement> m_Elements = new List<VertexBufferElement>();
     private int m_Stride = 0;

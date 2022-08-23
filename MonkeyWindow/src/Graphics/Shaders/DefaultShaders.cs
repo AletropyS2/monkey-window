@@ -29,6 +29,6 @@ public static class DefaultShaders
         }
     ";
 
-    public static Shaders SimpleShader = new Shaders(SimpleVertexShader, SimpleFragmentShader);
+    public static Shader SimpleShader = new Shader(SimpleVertexShader, SimpleFragmentShader);
 
 }

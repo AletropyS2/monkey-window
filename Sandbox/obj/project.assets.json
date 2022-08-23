@@ -335,11 +335,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\C#\\MonkeyWindow\\Sandbox\\Sandbox.csproj",
+      "projectUniqueName": "E:\\Projects\\C#\\MonkeyWindow\\Sandbox\\Sandbox.csproj",
       "projectName": "Sandbox",
-      "projectPath": "D:\\Projects\\C#\\MonkeyWindow\\Sandbox\\Sandbox.csproj",
+      "projectPath": "E:\\Projects\\C#\\MonkeyWindow\\Sandbox\\Sandbox.csproj",
       "packagesPath": "C:\\Users\\Nixan\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\C#\\MonkeyWindow\\Sandbox\\obj\\",
+      "outputPath": "E:\\Projects\\C#\\MonkeyWindow\\Sandbox\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Nixan\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -354,8 +354,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Projects\\C#\\MonkeyWindow\\MonkeyWindow\\MonkeyWindow.csproj": {
-              "projectPath": "D:\\Projects\\C#\\MonkeyWindow\\MonkeyWindow\\MonkeyWindow.csproj"
+            "E:\\Projects\\C#\\MonkeyWindow\\MonkeyWindow\\MonkeyWindow.csproj": {
+              "projectPath": "E:\\Projects\\C#\\MonkeyWindow\\MonkeyWindow\\MonkeyWindow.csproj"
             }
           }
         }
