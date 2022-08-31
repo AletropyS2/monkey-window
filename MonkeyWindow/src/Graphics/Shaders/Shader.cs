@@ -114,4 +114,11 @@ public class Shader
         Gl.Uniform1i(location, value);
     }
 
+    public void SetUniformMat4f(string name, Matrix4 matrix)
+    {
+        Gl.UseProgram(m_RendererID);
+        int location = Gl.GetUniformLocation(m_RendererID, name);
+        Gl.UniformMatrix4fv(location, 1, false, matrix.ToFloat());
+    }
+
 }

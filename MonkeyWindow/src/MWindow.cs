@@ -31,10 +31,10 @@ public class MWindow
 
         float[] vertices = new float[]
         {
-            -0.5f, -0.5f, 0f, 0f,
-            0.5f, -0.5f, 1f, 0f,
-            0.5f, 0.5f, 1f, 1f,
-            -0.5f, 0.5f, 0f, 1f
+            -0.5f, -0.5f, 0f, 0f, //0 Bottom left
+            0.5f, -0.5f, 1f, 0f, //1 Bottom right
+            0.5f, 0.5f, 1f, 1f,  //2 Top right
+            -0.5f, 0.5f, 0f, 1f //3 Top left
         };
 
         uint[] indices = new uint[]
@@ -57,6 +57,8 @@ public class MWindow
 
         va.AddBuffer(vb, layout);
 
+        Matrix4 projection = Matrix4.CreateOrthographic(4f, 3f, -1.0f, 1.0f);
+
         DefaultShaders.SimpleShader.Bind();
 
         DefaultShaders.SimpleShader.SetUniform4f("u_Color", 0.8f, 0.3f, 0.8f, 1.0f);
@@ -64,6 +66,7 @@ public class MWindow
         Texture texture = new Texture("res/textures/test.png", PixelFormat.Bgra, TextureParameter.Nearest);
         texture.Bind();
         DefaultShaders.SimpleShader.SetUniform1i("u_Texture", 0);
+        DefaultShaders.SimpleShader.SetUniformMat4f("u_MVP", projection);
 
         va.Unbind();
         ib.Unbind();

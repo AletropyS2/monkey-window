@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zRhindVr5RWLnm95q1V0UEuVeXtMN5X3VspLvqKv6073qvImFITK069aLi8wjBWU7zdsAElziZ/DVSrfiDFlbg==",
+  "dgSpecHash": "2IuXUK8Fr/hjBuvdWqO70vCPlSUzbMPhEfM+oqCGgnbN8jAGSzJLU3WuaefibP3l2Q733K28ZQQaPxQZX44pww==",
   "success": true,
-  "projectFilePath": "E:\\Projects\\C#\\MonkeyWindow\\MonkeyWindow\\MonkeyWindow.csproj",
+  "projectFilePath": "e:\\Projects\\C#\\MonkeyWindow\\MonkeyWindow\\MonkeyWindow.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nixan\\.nuget\\packages\\giawa.opengl\\0.2.1\\giawa.opengl.0.2.1.nupkg.sha512",
     "C:\\Users\\Nixan\\.nuget\\packages\\glfw-net\\3.3.1\\glfw-net.3.3.1.nupkg.sha512",
