@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+MQRbTfod2nAEkffEMU3hV/p1zykbKvU9vNrgUXqeMGcqBNIfhPDhZLonz55T9k+rlhRU+80O06e0507WjR6sA==",
+  "dgSpecHash": "zRhindVr5RWLnm95q1V0UEuVeXtMN5X3VspLvqKv6073qvImFITK069aLi8wjBWU7zdsAElziZ/DVSrfiDFlbg==",
   "success": true,
   "projectFilePath": "E:\\Projects\\C#\\MonkeyWindow\\MonkeyWindow\\MonkeyWindow.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\Nixan\\.nuget\\packages\\glfw-net\\3.3.1\\glfw-net.3.3.1.nupkg.sha512",
     "C:\\Users\\Nixan\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\Nixan\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\Nixan\\.nuget\\packages\\stbimagesharp\\2.27.11\\stbimagesharp.2.27.11.nupkg.sha512",
     "C:\\Users\\Nixan\\.nuget\\packages\\system.drawing.common\\5.0.2\\system.drawing.common.5.0.2.nupkg.sha512",
     "C:\\Users\\Nixan\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\Nixan\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"

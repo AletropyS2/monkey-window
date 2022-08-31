@@ -107,4 +107,11 @@ public class Shader
         Gl.Uniform1f(location, value);
     }
 
+    public void SetUniform1i(string name, int value)
+    {
+        Gl.UseProgram(m_RendererID);
+        int location = Gl.GetUniformLocation(m_RendererID, name);
+        Gl.Uniform1i(location, value);
+    }
+
 }

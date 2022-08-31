@@ -42,6 +42,10 @@
               "target": "Package",
               "version": "[0.2.1, )"
             },
+            "StbImageSharp": {
+              "target": "Package",
+              "version": "[2.27.11, )"
+            },
             "glfw-net": {
               "target": "Package",
               "version": "[3.3.1, )"

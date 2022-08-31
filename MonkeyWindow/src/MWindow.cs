@@ -31,10 +31,10 @@ public class MWindow
 
         float[] vertices = new float[]
         {
-            -0.5f, -0.5f,
-            0.5f, -0.5f,
-            0.5f, 0.5f,
-            -0.5f, 0.5f
+            -0.5f, -0.5f, 0f, 0f,
+            0.5f, -0.5f, 1f, 0f,
+            0.5f, 0.5f, 1f, 1f,
+            -0.5f, 0.5f, 0f, 1f
         };
 
         uint[] indices = new uint[]
@@ -43,12 +43,16 @@ public class MWindow
             2, 3, 0
         };
 
+        Gl.BlendFunc(BlendingFactorSrc.SrcAlpha, BlendingFactorDest.OneMinusSrcAlpha);
+        Gl.Enable(EnableCap.Blend);
+
         VertexArray va = new VertexArray();
 
         VertexBuffer<float> vb = new VertexBuffer<float>(vertices, vertices.Length * sizeof(float));
         IndexBuffer ib = new IndexBuffer(indices, indices.Length);
 
         VertexBufferLayout layout = new VertexBufferLayout();
+        layout.PushFloat(2);
         layout.PushFloat(2);
 
         va.AddBuffer(vb, layout);
@@ -57,11 +61,15 @@ public class MWindow
 
         DefaultShaders.SimpleShader.SetUniform4f("u_Color", 0.8f, 0.3f, 0.8f, 1.0f);
 
+        Texture texture = new Texture("res/textures/test.png", PixelFormat.Bgra, TextureParameter.Nearest);
+        texture.Bind();
+        DefaultShaders.SimpleShader.SetUniform1i("u_Texture", 0);
 
         va.Unbind();
         ib.Unbind();
         vb.Unbind();
         DefaultShaders.SimpleShader.Unbind();
+
 
         Renderer renderer = new Renderer();
 
